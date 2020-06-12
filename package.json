@@ -1,0 +1,23 @@
+{
+  "name": "s4f-plugin",
+  "version": "1.0.0",
+  "description": "",
+  "main": "build/index.js",
+  "scripts": {
+    "build": "wp-scripts build",
+    "start": "wp-scripts start"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wwsalmon/s4f-plugin.git"
+  },
+  "author": "Samson Zhang",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/wwsalmon/s4f-plugin/issues"
+  },
+  "homepage": "https://github.com/wwsalmon/s4f-plugin#readme",
+  "devDependencies": {
+    "@wordpress/scripts": "^9.0.0"
+  }
+}
