@@ -19,5 +19,10 @@
   "homepage": "https://github.com/wwsalmon/s4f-plugin#readme",
   "devDependencies": {
     "@wordpress/scripts": "^9.0.0"
+  },
+  "dependencies": {
+    "@wordpress/block-editor": "^4.0.0",
+    "@wordpress/blocks": "^6.17.0",
+    "@wordpress/components": "^9.7.0"
   }
 }

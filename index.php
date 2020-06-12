@@ -7,21 +7,8 @@
  * Author URI: https://www.samsonzhang.com/
  */
 
-function s4f_register_test_block(){
-    $asset_file = include( plugin_dir_path( __FILE__ ) . 'build/index.asset.php');
-
-    wp_register_script(
-        'test-block',
-        plugins_url( 'build/index.js', __FILE__ ),
-        $asset_file['dependencies'],
-        $asset_file['version']
-    );
-
-    register_block_type( 's4f-plugin/test-block', array(
-        'style' => 'test-block',
-        'editor_style' => 'test-block-editor',
-        'editor_script' => 'test-block',
-    ) );
+function enqueue_blocks(){
+	wp_enqueue_script("blocks",plugin_dir_url(__FILE__) . "/build/index.js", array('wp-blocks', 'wp-block-editor', 'wp-components'));
 }
 
-add_action("init", "s4f_register_test_block");
+add_action("enqueue_block_editor_assets", "enqueue_blocks");
