@@ -7,46 +7,58 @@ registerBlockType( 's4f-plugin/branch-info', {
     icon: 'universal-access-alt',
     category: 'layout',
     attributes: {
-        branchTitle: {
+        testControl: {
             type: 'string'
         },
-        stateCode: {
-            type: "string"
-        }
     },
     edit: (props) => {
-        const { attributes: { branchTitle, stateCode }, setAttributes, className } = props;
+        const { attributes: { testControl }, setAttributes, className } = props;
 
-        const onChangeBranchTitle = ( newBranchTitle ) => {
-            setAttributes( { branchTitle: newBranchTitle } );
-        };
-
-        const onChangeStateCode = (newStateCode) => {
-            setAttributes({stateCode: newStateCode === undefined ? "none" : newStateCode})
+        const onChangeTestControl = ( newTestControl ) => {
+            setAttributes( { testControl: newTestControl } );
         };
 
         return (
             <div>
                 {
                     <InspectorControls>
-                        <TextControl label="Branch Name" value={branchTitle} onChange={onChangeBranchTitle}></TextControl>
-                        <TextControl label="State Code" value={stateCode} onChange={onChangeStateCode}></TextControl>
+                        <TextControl label="Test control" value={testControl} onChange={onChangeTestControl}></TextControl>
                     </InspectorControls>
                 }
-                <>
-                    <div className="font-mono opacity-20"><a href="">&lt; All Branches</a></div>
-                    <h1 className={`font-mono font-l-responsive stateface-${stateCode}`}>{branchTitle}</h1>
-                </>
+                <div className="grid-three-col-small grid-with-dividers mt-3 mb-3">
+                    <div className="border-grid-child">
+                        <div className="font-42 font-bold"><span>424</span></div>
+                        <div className="font-mono-uppercase opacity-20"><span>Meals Rescued</span></div>
+                    </div>
+                    <div className="border-grid-child">
+                        <div className="font-42 font-bold"><span>25</span></div>
+                        <div className="font-mono-uppercase opacity-20"><span>Partner Bus. and Orgs</span></div>
+                    </div>
+                    <div className="border-grid-child">
+                        <div className="font-42 font-bold"><span>72</span></div>
+                        <div className="font-mono-uppercase opacity-20"><span>Student Volunteers</span></div>
+                    </div>
+                </div>
             </div>
         );
     },
     save: (props) => {
         console.log(props);
         return (
-            <>
-                <div className="font-mono opacity-20"><a href="">&lt; All Branches</a></div>
-                <h1 className={`font-mono font-l-responsive stateface-${props.attributes.stateCode}`}>{props.attributes.branchTitle}</h1>
-            </>
+            <div className="grid-three-col-small grid-with-dividers mt-3 mb-3">
+                <div className="border-grid-child">
+                    <div className="font-42 font-bold"><span>424</span></div>
+                    <div className="font-mono-uppercase opacity-20"><span>Meals Rescued</span></div>
+                </div>
+                <div className="border-grid-child">
+                    <div className="font-42 font-bold"><span>25</span></div>
+                    <div className="font-mono-uppercase opacity-20"><span>Partner Businesses and Organizations</span></div>
+                </div>
+                <div className="border-grid-child">
+                    <div className="font-42 font-bold"><span>72</span></div>
+                    <div className="font-mono-uppercase opacity-20"><span>Student Volunteers</span></div>
+                </div>
+            </div>
         )
     }
 });

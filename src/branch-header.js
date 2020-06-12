@@ -1,9 +1,6 @@
 const { registerBlockType } = wp.blocks;
 const { InspectorControls } = wp.blockEditor;
 const { TextControl } = wp.components;
-// import {registerBlockType} from "@wordpress/blocks";
-// import {InspectorControls} from "@wordpress/block-editor";
-// import {TextControl} from "@wordpress/components";
 
 registerBlockType( 's4f-plugin/branch-header', {
     title: 'S4F Branch Header',
