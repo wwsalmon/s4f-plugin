@@ -1,5 +1,5 @@
 var_name = input("Enter variable name: ")
-var_cap = var_name.capitalize()
+var_cap = var_name[:1].upper() + var_name[1:]
 funcOutput = (
 	f"const onChange{var_cap} = (new{var_cap}) => {{"
 	f"setAttributes({{{var_name}: new{var_cap}}});"
