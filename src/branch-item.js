@@ -2,13 +2,14 @@ const { registerBlockType } = wp.blocks;
 const { InspectorControls } = wp.blockEditor;
 const { TextControl } = wp.components;
 
-registerBlockType( 's4f-plugin/branch-header', {
-    title: 'S4F Branch Header',
+registerBlockType( 's4f-plugin/branch-item', {
+    title: 'S4F Branch Item',
     icon: 'universal-access-alt',
     category: 'layout',
     attributes: {
         branchTitle: {
-            type: 'string'
+            type: 'string',
+            default: "Branch title"
         },
         stateCode: {
             type: "string"
@@ -34,18 +35,22 @@ registerBlockType( 's4f-plugin/branch-header', {
                     </InspectorControls>
                 }
                 <>
-                    <div className="font-mono opacity-20"><a href="../branches">&lt; All Branches</a></div>
-                    <h1 className={`font-mono font-l-responsive stateface-${stateCode}`}>{branchTitle}</h1>
+                    <a href={"../" + branchTitle.replace(/\s+/g, '-').toLowerCase()}><div className="hover-gray-1 pt-3 pb-3">
+                        <h1 className={`font-mono font-l-responsive stateface-${stateCode}`}>{branchTitle}</h1>
+                    </div></a>
+                    <hr className="opacity-20"></hr>
                 </>
             </div>
         );
     },
     save: (props) => {
-        console.log(props);
+        const {stateCode, branchTitle} = props.attributes;
         return (
             <>
-                <div className="font-mono opacity-20"><a href="../branches">&lt; All Branches</a></div>
-                <h1 className={`font-mono font-l-responsive stateface-${props.attributes.stateCode}`}>{props.attributes.branchTitle}</h1>
+                <a href={"../" + branchTitle.replace(/\s+/g, '-').toLowerCase()}><div className="hover-gray-1 pt-3 pb-3">
+                    <h1 className={`font-mono font-l-responsive stateface-${stateCode}`}>{branchTitle}</h1>
+                </div></a>
+                <hr className="opacity-20"></hr>
             </>
         )
     }
