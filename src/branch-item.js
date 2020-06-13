@@ -35,7 +35,7 @@ registerBlockType( 's4f-plugin/branch-item', {
                     </InspectorControls>
                 }
                 <>
-                    <a href={"../" + branchTitle.replace(/\s+/g, '-').toLowerCase()}><div className="hover-gray-1 pt-3 pb-3">
+                    <a href={"../" + branchTitle.replace(/\s+/g, '-').toLowerCase()} className="font-no-underline"><div className="hover-gray-1 pt-3 pb-3">
                         <h1 className={`font-mono font-l-responsive stateface-${stateCode}`}>{branchTitle}</h1>
                     </div></a>
                     <hr className="opacity-20"></hr>
@@ -47,7 +47,7 @@ registerBlockType( 's4f-plugin/branch-item', {
         const {stateCode, branchTitle} = props.attributes;
         return (
             <>
-                <a href={"../" + branchTitle.replace(/\s+/g, '-').toLowerCase()}><div className="hover-gray-1 pt-3 pb-3">
+                <a href={"../" + branchTitle.replace(/\s+/g, '-').toLowerCase()} className="font-no-underline"><div className="hover-gray-1 pt-3 pb-3">
                     <h1 className={`font-mono font-l-responsive stateface-${stateCode}`}>{branchTitle}</h1>
                 </div></a>
                 <hr className="opacity-20"></hr>

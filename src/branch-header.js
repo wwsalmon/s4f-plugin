@@ -34,7 +34,7 @@ registerBlockType( 's4f-plugin/branch-header', {
                     </InspectorControls>
                 }
                 <>
-                    <div className="font-mono opacity-20"><a href="../branches">&lt; All Branches</a></div>
+                    <div className="font-mono opacity-20"><a href="../branches" className="font-no-underline">&lt; All Branches</a></div>
                     <h1 className={`font-mono font-l-responsive stateface-${stateCode}`}>{branchTitle}</h1>
                 </>
             </div>
@@ -44,7 +44,7 @@ registerBlockType( 's4f-plugin/branch-header', {
         console.log(props);
         return (
             <>
-                <div className="font-mono opacity-20"><a href="../branches">&lt; All Branches</a></div>
+                <div className="font-mono opacity-20"><a href="../branches" className="font-no-underline">&lt; All Branches</a></div>
                 <h1 className={`font-mono font-l-responsive stateface-${props.attributes.stateCode}`}>{props.attributes.branchTitle}</h1>
             </>
         )
