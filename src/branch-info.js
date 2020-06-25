@@ -55,7 +55,7 @@ registerBlockType( 's4f-plugin/branch-info', {
                 <div className="grid-three-col-small grid-with-dividers mt-3 mb-3">
                     <div className="border-grid-child">
                         <div className="font-42 font-bold"><span>{numDonations}</span></div>
-                        <div className="font-mono-uppercase opacity-20"><span>Meals Rescued</span></div>
+                        <div className="font-mono-uppercase opacity-20"><span>Servings Rescued</span></div>
                     </div>
                     <div className="border-grid-child">
                         <div className="font-42 font-bold"><span>{numPartners}</span></div>
@@ -75,7 +75,7 @@ registerBlockType( 's4f-plugin/branch-info', {
             <div className="grid-three-col-small grid-with-dividers mt-3 mb-3">
                 <div className="border-grid-child">
                     <div className="font-42 font-bold"><span>{numDonations}</span></div>
-                    <div className="font-mono-uppercase opacity-20"><span>Meals Rescued</span></div>
+                    <div className="font-mono-uppercase opacity-20"><span>Servings Rescued</span></div>
                 </div>
                 <div className="border-grid-child">
                     <div className="font-42 font-bold"><span>{numPartners}</span></div>
